@@ -1,17 +1,29 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
-  "author": "",
-  "license": "",
+  "name": "products-postgres",
+  "version": "1.0.0",
+  "description": "Postgres RDBMS for the Product Widget API",
+  "author": "Mario Valencia",
+  "license": "MIT",
   "engines": {
     "node": ">=6.13.0"
   },
   "scripts": {
+    "test": "k6 run tests/k6.js",
+    "server": "nodemon --watch server server/index.js"
   },
   "dependencies": {
+    "bluebird": "^3.7.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16",
+    "pg": "^8.7.3",
+    "sequelize": "^6.20.1"
   },
   "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "babel-jest": "^28.1.1",
+    "jest": "^28.1.1",
+    "supertest": "^6.2.3"
   }
 }
