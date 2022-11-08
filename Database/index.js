@@ -1,10 +1,17 @@
+require('dotenv').config();
 const {Pool, Client } = require("pg");
 
+
 const pool = new Pool({
-  user: process.env.User,
-  port: process.env.dbPort,
-  database: process.env.Database
+  user: process.env.pgUser,
+  port: process.env.pgdbPort,
+  database: process.pgenv.Database,
+  host: process.env.pgHost,
+  password: process.env.pgPassword
 });
+
+
+
 
 // pool.query("select * from products where id < 5")
 //   .then((data) => {
