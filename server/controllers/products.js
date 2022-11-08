@@ -23,15 +23,17 @@ const productInformation = function (req, res) {
 const styles = function (req, res) {
   let productId = req.params.product_id;
   productModels.getStyle(productId)
-    // .then((data) => {
-    //   console.log(data);
-    //   res.send(data);
-    // });
+    .then((data) => {
+      res.send(data);
+    });
 };
 
 const related = function (req, res) {
   let productId = req.params.product_id;
-  productModels.getRelated(productId);
+  productModels.getRelated(productId)
+    .then((data) => {
+      res.send(data);
+    });
 };
 
 module.exports = {

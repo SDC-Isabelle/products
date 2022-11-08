@@ -30,7 +30,7 @@ CREATE TABLE "styles" (
     "name" TEXT NOT NULL,
     "sale_price" TEXT NULL,
     "original_price" TEXT NOT NULL,
-    "default_style" INT NOT NULL,
+    "default_style" BOOLEAN NOT NULL,
     PRIMARY KEY ("id")
 );
 
